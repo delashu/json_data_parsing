@@ -1,0 +1,1 @@
+for i in `ls /path/to/output/directory/*.json`; do qsub -N JOBNAME -q num_day-day -l h_vmem=num_gigsG -b y -l h_stack=num_memM -M YOUR_EMAIL -m as -V -cwd -e /new/desired/output/directory/ -o /new/desired/output/directory/ python /file/path/to/pythoon_file/large_parse.py $i ; done
