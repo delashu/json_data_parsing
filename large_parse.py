@@ -33,7 +33,7 @@ def parse_json(input_json):
             if isjsonline(raw_line):
                 fixed_json = fixit(raw_line)
                 data = json.loads(fixed_json)
-                if 'str3//outData' not in data['str1'][1]['str2']:
+                if 'str3' not in data['str1'][1]['str2']:
                     continue
                 else:
                     jinput = data['str1'][1]['str2']['str3']          
